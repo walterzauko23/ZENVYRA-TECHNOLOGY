@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenvyra Technologies - Enterprise Software Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .software-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(145deg, #1e293b 0%, #2d3748 100%);
+            border: 1px solid #374151;
+        }
+        .software-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #4f46e5;
+        }
+        .sector-tab {
+            padding: 12px 24px;
+            border-radius: 30px;
+            margin: 0 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .sector-tab.active {
+            background: linear-gradient(45deg, #6366f1, #10b981);
+            color: white;
+            border-color: #4f46e5;
+        }
+        .sector-tab:not(.active):hover {
+            border-color: #4f46e5;
+            background: rgba(79, 70, 229, 0.1);
+        }
+        .floating-whatsapp {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .logo-gradient {
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-emerald-500 rounded-lg flex items-center justify-center">
+                    <span class="font-bold text-white">Z</span>
+                </div>
+                <div>
+                    <div class="text-xl font-bold logo-gradient">ZENVYRA</div>
+                    <div class="text-xs text-gray-400">TECHNOLOGIES</div>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+                <a href="#solutions" class="hover:text-indigo-400 transition">Solutions</a>
+                <a href="#sectors" class="hover:text-indigo-400 transition">Sectors</a>
+                <a href="#contact" class="bg-gradient-to-r from-indigo-600 to-emerald-600 px-5 py-2 rounded-lg hover:opacity-90 transition">Request Demo</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-400">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-2 bg-indigo-600/20 rounded-full mb-6">
+                    <span class="text-indigo-400 text-sm font-semibold">★ ENTERPRISE SOFTWARE SOLUTIONS</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    <span class="bg-gradient-to-r from-white via-indigo-200 to-emerald-200 bg-clip-text text-transparent">
+                        Transform Your Business<br>With Our Software
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                    Professional software solutions for businesses, education, and healthcare. 
+                    Scalable, reliable, and built for performance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#solutions" class="bg-gradient-to-r from-indigo-600 to-emerald-600 hover:opacity-90 px-8 py-4 rounded-xl font-semibold text-lg transition shadow-xl">
+                        <i class="fas fa-eye mr-2"></i> View All Solutions
+                    </a>
+                    <a href="#contact" class="bg-gray-800 hover:bg-gray-700 px-8 py-4 rounded-xl font-semibold text-lg transition border border-gray-700">
+                        <i class="fas fa-play-circle mr-2"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="text-center p-6 bg-white/5 rounded-xl border border-gray-800">
+                    <div class="text-3xl font-bold text-indigo-400">22+</div>
+                    <div class="text-gray-400">Software Products</div>
+                </div>
+                <div class="text-center p-6 bg-white/5 rounded-xl border border-gray-800">
+                    <div class="text-3xl font-bold text-emerald-400">4</div>
+                    <div class="text-gray-400">Major Sectors</div>
+                </div>
+                <div class="text-center p-6 bg-white/5 rounded-xl border border-gray-800">
+                    <div class="text-3xl font-bold text-purple-400">100%</div>
+                    <div class="text-gray-400">Customizable</div>
+                </div>
+                <div class="text-center p-6 bg-white/5 rounded-xl border border-gray-800">
+                    <div class="text-3xl font-bold text-blue-400">24/7</div>
+                    <div class="text-gray-400">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors Navigation -->
+    <section id="sectors" class="py-12 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Solutions By Sector</h2>
+            
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <div class="sector-tab active" data-sector="business">
+                    <i class="fas fa-building mr-2"></i> Business Software
+                </div>
+                <div class="sector-tab" data-sector="schools">
+                    <i class="fas fa-school mr-2"></i> Schools
+                </div>
+                <div class="sector-tab" data-sector="colleges">
+                    <i class="fas fa-university mr-2"></i> Colleges & Universities
+                </div>
+                <div class="sector-tab" data-sector="healthcare">
+                    <i class="fas fa-hospital mr-2"></i> Healthcare
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Solutions (Dynamic Content) -->
+    <section id="solutions" class="py-16 px-4 bg-gray-950">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Business Software (Default) -->
+            <div id="business-content" class="sector-content active">
+                <div class="text-center mb-12">
+                    <div class="inline-block px-4 py-1 bg-indigo-600 rounded-full text-sm font-semibold mb-3">SECTOR 1</div>
+                    <h2 class="text-3xl font-bold mb-4">Business Software Solutions</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        Comprehensive software solutions designed to streamline business operations, 
+                        increase efficiency, and drive growth for SMEs and corporations.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Accounting System -->
+                    <div class="software-card p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-calculator text-indigo-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Accounting & Invoicing</h3>
+                                <div class="text-sm text-gray-400 mt-1">Financial Management</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Complete financial management system with automated expense tracking, 
+                            invoice generation, and financial reporting.
+                        </p>
+                        <div class="bg-gray-900/50 p-3 rounded-lg">
+                            <div class="text-sm font-semibold text-gray-400 mb-1">Ideal For:</div>
+                            <div class="text-sm">SMEs, Retail Shops, Corporates</div>
+                        </div>
+                    </div>
+
+                    <!-- Payroll & HR -->
+                    <div class="software-card p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Payroll & HR Management</h3>
+                                <div class="text-sm text-gray-400 mt-1">Human Resources</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Automated employee management, salary processing, leave tracking, 
+                            and comprehensive HR administration.
+                        </p>
+                        <div class="bg-gray-900/50 p-3 rounded-lg">
+                            <div class="text-sm font-semibold text-gray-400 mb-1">Ideal For:</div>
+                            <div class="text-sm">SMEs, Corporate Organizations</div>
+                        </div>
+                    </div>
+
+                    <!-- Inventory Management -->
+                    <div class="software-card p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-boxes text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Inventory Management</h3>
+                                <div class="text-sm text-gray-400 mt-1">Stock Control</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Real-time inventory tracking with automated reorder alerts, 
+                            stock optimization, and warehouse management.
+                        </p>
+                        <div class="bg-gray-900/50 p-3 rounded-lg">
+                            <div class="text-sm font-semibold text-gray-400 mb-1">Ideal For:</div>
+                            <div class="text-sm">Retail Stores, Warehouses, Distributors</div>
+                        </div>
+                    </div>
+
+                    <!-- POS System -->
+                    <div class="software-card p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-cash-register text-purple-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Point of Sale (POS)</h3>
+                                <div class="text-sm text-gray-400 mt-1">Retail Management</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Complete retail solution with billing, receipts, sales analytics, 
+                            and customer relationship management.
+                        </p>
+                        <div class="bg-gray-900/50 p-3 rounded-lg">
+                            <div class="text-sm font-semibold text-gray-400 mb-1">Ideal For:</div>
+                            <div class="text-sm">Restaurants, Retail Stores, Service Businesses</div>
+                        </div>
+                    </div>
+
+                    <!-- CRM -->
+                    <div class="software-card p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-pink-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Customer Relationship</h3>
+                                <div class="text-sm text-gray-400 mt-1">CRM System</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Lead tracking, client management, sales pipeline optimization, 
+                            and customer engagement tools.
+                        </p>
+                        <div class="bg-gray-900/50 p-3 rounded-lg">
+                            <div class="text-sm font-semibold text-gray-400 mb-1">Ideal For:</div>
+                            <div class="text-sm">Sales Companies, Marketing Agencies, SMEs</div>
+                        </div>
+                    </div>
+
+                    <!-- Logistics Tracker -->
+                    <div class="software-card p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-yellow-600/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-truck text-yellow-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Logistics Tracker</h3>
+                                <div class="text-sm text-gray-400 mt-1">Delivery Management</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Real-time shipment tracking, driver management, route optimization, 
+                            and delivery analytics.
+                        </p>
+                        <div class="bg-gray-900/50 p-3 rounded-lg">
+                            <div class="text-sm font-semibold text-gray-400 mb-1">Ideal For:</div>
+                            <div class="text-sm">E-commerce, Courier Services, Logistics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schools Software (Hidden by default) -->
+            <div id="schools-content" class="sector-content hidden">
+                <!-- Content will be loaded via JavaScript -->
+            </div>
+
+            <!-- Colleges Software (Hidden by default) -->
+            <div id="colleges-content" class="sector-content hidden">
+                <!-- Content will be loaded via JavaScript -->
+            </div>
+
+            <!-- Healthcare Software (Hidden by default) -->
+            <div id="healthcare-content" class="sector-content hidden">
+                <!-- Content will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 px-4 bg-gradient-to-br from-gray-900 via-indigo-900 to-emerald-900">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Operations?
+            </h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Schedule a personalized demo to see how our software can revolutionize 
+                your business, school, or healthcare facility.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition shadow-xl">
+                    <i class="fas fa-calendar-alt mr-2"></i> Schedule Demo
+                </a>
+                <a href="https://wa.me/254748634867" class="bg-gray-800 hover:bg-gray-700 px-8 py-4 rounded-xl font-semibold text-lg transition border border-gray-700">
+                    <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-gray-400">Contact us for inquiries, demos, or custom solutions</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- WhatsApp -->
+                <div class="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">WhatsApp</h3>
+                    <a href="https://wa.me/254748634867" class="text-green-400 hover:text-green-300 font-semibold text-lg block mb-2">
+                        +254 748 634 867
+                    </a>
+                    <p class="text-gray-400 text-sm">Instant response for quick inquiries</p>
+                </div>
+
+                <!-- Telegram -->
+                <div class="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fab fa-telegram text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Telegram</h3>
+                    <a href="https://t.me/anonymous_anoniumz23" class="text-blue-400 hover:text-blue-300 font-semibold text-lg block mb-2">
+                        @anonymous_anoniumz23
+                    </a>
+                    <p class="text-gray-400 text-sm">Join our channel for updates</p>
+                </div>
+
+                <!-- Email -->
+                <div class="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Email</h3>
+                    <a href="mailto:info@zenvyra.com" class="text-indigo-400 hover:text-indigo-300 font-semibold text-lg block mb-2">
+                        info@zenvyra.com
+                    </a>
+                    <p class="text-gray-400 text-sm">For detailed proposals and inquiries</p>
+                </div>
+            </div>
+
+            <!-- Inquiry Form -->
+            <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
+                <h3 class="text-2xl font-bold mb-6 text-center">Send Us an Inquiry</h3>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Name" class="w-full px-5 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500">
+                        <input type="email" placeholder="Email Address" class="w-full px-5 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <select class="w-full px-5 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500">
+                        <option value="">Select Sector of Interest</option>
+                        <option value="business">Business Software</option>
+                        <option value="schools">School Software</option>
+                        <option value="colleges">College/University Software</option>
+                        <option value="healthcare">Healthcare Software</option>
+                        <option value="multiple">Multiple Sectors</option>
+                    </select>
+                    <textarea placeholder="Tell us about your specific needs..." rows="4" class="w-full px-5 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500"></textarea>
+                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-emerald-600 hover:opacity-90 py-4 rounded-lg font-semibold text-lg transition">
+                        <i class="fas fa-paper-plane mr-2"></i> Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-12 px-4 border-t border-gray-800">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-10">
+                <div class="mb-8 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-emerald-500 rounded-lg flex items-center justify-center">
+                            <span class="font-bold text-white">Z</span>
+                        </div>
+                        <div>
+                            <div class="text-xl font-bold logo-gradient">ZENVYRA TECHNOLOGIES</div>
+                            <div class="text-sm text-gray-500">Enterprise Software Solutions</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 max-w-md">
+                        Providing comprehensive software solutions for businesses, 
+                        educational institutions, and healthcare facilities.
+                    </p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://wa.me/254748634867" class="w-12 h-12 bg-green-600/20 hover:bg-green-600/30 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-whatsapp text-green-400 text-xl"></i>
+                    </a>
+                    <a href="https://t.me/anonymous_anoniumz23" class="w-12 h-12 bg-blue-600/20 hover:bg-blue-600/30 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-telegram text-blue-400 text-xl"></i>
+                    </a>
+                    <a href="mailto:info@zenvyra.com" class="w-12 h-12 bg-purple-600/20 hover:bg-purple-600/30 rounded-full flex items-center justify-center transition">
+                        <i class="fas fa-envelope text-purple-400 text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center pt-8 border-t border-gray-800">
+                <p class="text-gray-600">
+                    &copy; 2024 Zenvyra Technologies. All software products are available for licensing and deployment.
+                </p>
+                <p class="text-gray-700 text-sm mt-2">
+                    Specialized solutions for: Business • Education • Healthcare • Logistics • Retail
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/254748634867" 
+       class="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-2xl floating-whatsapp z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- JavaScript for Dynamic Content -->
+    <script>
+        // Sector Data
+        const sectorData = {
+            business: {
+                title: "Business Software Solutions",
+                description: "Comprehensive software solutions designed to streamline business operations, increase efficiency, and drive growth for SMEs and corporations.",
+                products: [
+                    {
+                        icon: "fa-calculator",
+                        iconColor: "indigo",
+                        title: "Accounting & Invoicing",
+                        subtitle: "Financial Management",
+                        description: "Complete financial management system with automated expense tracking, invoice generation, and financial reporting.",
+                        idealFor: "SMEs, Retail Shops, Corporates"
+                    },
+                    {
+                        icon: "fa-users",
+                        iconColor: "blue",
+                        title: "Payroll & HR Management",
+                        subtitle: "Human Resources",
+                        description: "Automated employee management, salary processing, leave tracking, and comprehensive HR administration.",
+                        idealFor: "SMEs, Corporate Organizations"
+                    },
+                    {
+                        icon: "fa-boxes",
+                        iconColor: "green",
+                        title: "Inventory Management",
+                        subtitle: "Stock Control",
+                        description: "Real-time inventory tracking with automated reorder alerts, stock optimization, and warehouse management.",
+                        idealFor: "Retail Stores, Warehouses, Distributors"
+                    },
+                    {
+                        icon: "fa-cash-register",
+                        iconColor: "purple",
+                        title: "Point of Sale (POS)",
+                        subtitle: "Retail Management",
+                        description: "Complete retail solution with billing, receipts, sales analytics, and customer relationship management.",
+                        idealFor: "Restaurants, Retail Stores, Service Businesses"
+                    },
+                    {
+                        icon: "fa-chart-line",
+                        iconColor: "pink",
+                        title: "Customer Relationship",
+                        subtitle: "CRM System",
+                        description: "Lead tracking, client management, sales pipeline optimization, and customer engagement tools.",
+                        idealFor: "Sales Companies, Marketing Agencies, SMEs"
+                    },
+                    {
+                        icon: "fa-truck",
+                        iconColor: "yellow",
+                        title: "Logistics Tracker",
+                        subtitle: "Delivery Management",
+                        description: "Real-time shipment tracking, driver management, route optimization, and delivery analytics.",
+                        idealFor: "E-commerce, Courier Services, Logistics"
+                    }
+                ]
+            },
+            schools: {
+                title: "School Management Software",
+                description: "Digital transformation solutions for primary and secondary education institutions to streamline administration and enhance learning.",
+                products: [
+                    {
+                        icon: "fa-school",
+                        iconColor: "emerald",
+                        title: "School Management System",
+                        subtitle: "Complete Administration",
+                        description: "Integrated solution for attendance, fees, grades, timetables, and school administration.",
+                        idealFor: "Primary & Secondary Schools"
+                    },
+                    {
+                        icon: "fa-laptop",
+                        iconColor: "blue",
+                        title: "E-Learning Platform",
+                        subtitle: "Digital Learning",
+                        description: "Online lessons, assignments, educational resources, and interactive learning tools.",
+                        idealFor: "Schools, Educational Centers"
+                    },
+                    {
+                        icon: "fa-file-alt",
+                        iconColor: "purple",
+                        title: "Exam Management",
+                        subtitle: "Assessment System",
+                        description: "Digital exam creation, administration, automated grading, and performance analysis.",
+                        idealFor: "Schools & Examination Centers"
+                    },
+                    {
+                        icon: "fa-chart-bar",
+                        iconColor: "pink",
+                        title: "Student Analytics",
+                        subtitle: "Performance Tracking",
+                        description: "Comprehensive analytics for tracking grades, attendance, and academic improvement.",
+                        idealFor: "Schools, Educational Administrators"
+                    },
+                    {
+                        icon: "fa-credit-card",
+                        iconColor: "green",
+                        title: "Fees Payment Portal",
+                        subtitle: "Financial Management",
+                        description: "Secure online tuition collection with automated receipt generation and payment tracking.",
+                        idealFor: "Schools, Parent Associations"
+                    }
+                ]
+            },
+            colleges: {
+                title: "College & University Software",
+                description: "Advanced solutions for higher education institutions to manage academic programs, research, and student life.",
+                products: [
+                    {
+                        icon: "fa-university",
+                        iconColor: "purple",
+                        title: "University Management",
+                        subtitle: "Campus Administration",
+                        description: "Comprehensive system for student registration, timetables, fees, and academic management.",
+                        idealFor: "Colleges & Universities"
+                    },
+                    {
+                        icon: "fa-graduation-cap",
+                        iconColor: "blue",
+                        title: "Learning Management",
+                        subtitle: "LMS Platform",
+                        description: "Advanced platform for online courses, academic resources, and virtual classrooms.",
+                        idealFor: "Colleges, Universities, Training Institutes"
+                    },
+                    {
+                        icon: "fa-clipboard-check",
+                        iconColor: "red",
+                        title: "Exam Management Portal",
+                        subtitle: "Assessment System",
+                        description: "Online exams, automated grading, plagiarism detection, and academic integrity tools.",
+                        idealFor: "Universities, Examination Boards"
+                    },
+                    {
+                        icon: "fa-flask",
+                        iconColor: "green",
+                        title: "Research Management",
+                        subtitle: "Academic Research",
+                        description: "Track faculty and student research projects, publications, grants, and collaborations.",
+                        idealFor: "Research Universities, Academic Institutions"
+                    },
+                    {
+                        icon: "fa-handshake",
+                        iconColor: "yellow",
+                        title: "Alumni Portal",
+                        subtitle: "Network Management",
+                        description: "Engagement platform for alumni networking, events, fundraising, and career services.",
+                        idealFor: "Universities, Alumni Associations"
+                    }
+                ]
+            },
+            healthcare: {
+                title: "Healthcare Software Solutions",
+                description: "Specialized solutions for hospitals, clinics, and medical facilities to improve patient care and operational efficiency.",
+                products: [
+                    {
+                        icon: "fa-hospital",
+                        iconColor: "red",
+                        title: "Hospital Management",
+                        subtitle: "Patient Care System",
+                        description: "Complete solution for patient records, billing, appointments, and hospital administration.",
+                        idealFor: "Hospitals, Medical Centers"
+                    },
+                    {
+                        icon: "fa-calendar-check",
+                        iconColor: "blue",
+                        title: "Clinic Appointment",
+                        subtitle: "Scheduling System",
+                        description: "Online patient booking, appointment management, and clinic scheduling automation.",
+                        idealFor: "Clinics, Private Practices"
+                    },
+                    {
+                        icon: "fa-pills",
+                        iconColor: "green",
+                        title: "Pharmacy Management",
+                        subtitle: "Medication Control",
+                        description: "Track medicines, inventory, expiry dates, and prescription management for pharmacies.",
+                        idealFor: "Pharmacies, Hospital Pharmacies"
+                    },
+                    {
+                        icon: "fa-vial",
+                        iconColor: "purple",
+                        title: "Lab Management",
+                        subtitle: "Test Management",
+                        description: "Comprehensive laboratory test tracking, result management, and quality control.",
+                        idealFor: "Medical Labs, Hospital Labs"
+                    },
+                    {
+                        icon: "fa-video",
+                        iconColor: "cyan",
+                        title: "Telemedicine Platform",
+                        subtitle: "Remote Healthcare",
+                        description: "Online medical consultations with secure video, chat, and payment integration.",
+                        idealFor: "Hospitals, Clinics, Medical Practices"
+                    },
+                    {
+                        icon: "fa-file-invoice-dollar",
+                        iconColor: "yellow",
+                        title: "Medical Billing",
+                        subtitle: "Insurance & Billing",
+                        description: "Automated billing, insurance claims processing, and revenue cycle management.",
+                        idealFor: "Hospitals, Medical Billing Companies"
+                    }
+                ]
+            }
+        };
+
+        // Color classes mapping
+        const colorClasses = {
+            indigo: { bg: 'bg-indigo-600/20', text: 'text-indigo-400' },
+            blue: { bg: 'bg-blue-600/20', text: 'text-blue-400' },
+            green: { bg: 'bg-green-600/20', text: 'text-green-400' },
+            emerald: { bg: 'bg-emerald-600/20', text: 'text-emerald-400' },
+            purple: { bg: 'bg-purple-600/20', text: 'text-purple-400' },
+            pink: { bg: 'bg-pink-600/20', text: 'text-pink-400' },
+            yellow: { bg: 'bg-yellow-600/20', text: 'text-yellow-400' },
+            red: { bg: 'bg-red-600/20', text: 'text-red-400' },
+            cyan: { bg: 'bg-cyan-600/20', text: 'text-cyan-400' }
+        };
+
+        // Function to render sector content
+        function renderSectorContent(sectorId) {
+            const sector = sectorData[sectorId];
+            const container = document.getElementById(`${sectorId}-content`);
+            
+            // Clear container
+            container.innerHTML = '';
+            
+            // Add title and description
+            container.innerHTML = `
+                <div class="text-center mb-12">
+                    <div class="inline-block px-4 py-1 bg-${sectorId === 'business' ? 'indigo' : sectorId === 'schools' ? 'emerald' : sectorId === 'colleges' ? 'purple' : 'red'}-600 rounded-full text-sm font-semibold mb-3">
+                        SECTOR ${sectorId === 'business' ? '1' : sectorId === 'schools' ? '2' : sectorId === 'colleges' ? '3' : '4'}
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4">${sector.title}</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">${sector.description}</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="${sectorId}-products">
+                    <!-- Products will be inserted here -->
+                </div>
+            `;
+            
+            // Add products
+            const productsContainer = document.getElementById(`${sectorId}-products`);
+            sector.products.forEach(product => {
+                const colorClass = colorClasses[product.iconColor];
+                const productHtml = `
+                    <div class="software-card p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 ${colorClass.bg} rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas ${product.icon} ${colorClass.text} text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">${product.title}</h3>
+                                <div class="text-sm text-gray-400 mt-1">${product.subtitle}</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">${product.description}</p>
+                        <div class="bg-gray-900/50 p-3 rounded-lg">
+                            <div class="text-sm font-semibold text-gray-400 mb-1">Ideal For:</div>
+                            <div class="text-sm">${product.idealFor}</div>
+                        </div>
+                    </div>
+                `;
+                productsContainer.innerHTML += productHtml;
+            });
+        }
+
+        // Initialize with business sector
+        renderSectorContent('business');
+        renderSectorContent('schools');
+        renderSectorContent('colleges');
+        renderSectorContent('healthcare');
+
+        // Sector tab switching
+        document.querySelectorAll('.sector-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const sectorId = this.getAttribute('data-sector');
+                
+                // Update active tab
+                document.querySelectorAll('.sector-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show selected sector content
+                document.querySelectorAll('.sector-content').forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('active');
+                });
+                
+                const targetContent = document.getElementById(`${sectorId}-content`);
+                targetContent.classList.remove('hidden');
+                targetContent.classList.add('active');
+                
+                // Smooth scroll to content
+                targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you within 24 hours.');
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
